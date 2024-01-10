@@ -1,0 +1,17 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens18:
+      addresses:
+        - 192.168.145.32/26
+      gateway4: 192.168.145.1  # Puerta de enlace para ens18
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]  # Servidores DNS para ens18
+
+    ens19:
+      addresses:
+        - 10.18.55.170/27
+      gateway4: 10.18.55.161  # Puerta de enlace para ens19
+      nameservers:
+        addresses: [1.1.1.1, 1.0.0.1]  # Servidores DNS para ens19
